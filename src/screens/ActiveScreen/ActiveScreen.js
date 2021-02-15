@@ -1,14 +1,15 @@
 import {StyleSheet, Text, View} from "react-native";
 import React from "react";
+import TaskItem from "../../components/Tasks/TaskItem";
 
-export default function AllScreen() {
+export default function ActiveScreen() {
     return (
         <View style={styles.tabContent}>
-            <Text>All!</Text>
+
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    tabContent: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+    tabContent: {flex: 1, alignItems: 'center'},
 });

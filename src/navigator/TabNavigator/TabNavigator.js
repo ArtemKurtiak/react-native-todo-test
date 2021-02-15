@@ -1,11 +1,11 @@
 import {NavigationContainer} from "@react-navigation/native";
-import AllScreen from "../AllScreen/AllSсreen";
 import {Image} from "react-native";
-import ActiveScreen from "../ActiveScreen/ActiveScreen";
-import CompletedScreen from "../CompletedScreen/DoneScreen";
 import React from "react";
 import {createMaterialBottomTabNavigator} from "@react-navigation/material-bottom-tabs";
-import { COLOR } from '../../constants/colors';
+import AllScreen from "../../screens/AllScreen/AllSсreen";
+import ActiveScreen from "../../screens/ActiveScreen/ActiveScreen";
+import CompletedScreen from "../../screens/CompletedScreen/DoneScreen";
+import AllScreenContainer from "../../screens/AllScreen/AllScreenContainer";
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -16,13 +16,13 @@ export default function TabNavigator() {
                 activeColor="#0A0D76"
                 inactiveColor="#6B6EC9"
                 barStyle={{
-                    backgroundColor: COLOR.RED,
+                    backgroundColor: '#BB97E4',
                     borderTopWidth: 4,
                     borderColor: '#A06FD7',
                 }}>
                 <Tab.Screen
                     name="All"
-                    component={AllScreen}
+                    component={AllScreenContainer}
                     options={{
                         tabBarLabel: 'All',
                         tabBarIcon: () => (
